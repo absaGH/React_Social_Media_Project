@@ -4,9 +4,9 @@ import sampleIm from "/home/yosef/Desktop/react folders/React_Social_Media_Proje
 const RightBar = () => {
     return (
         <div className="rightBar">
-            <span>Suggestions For You</span>
             <div className="container">
               <div className="item">
+                <span>Suggestions For You</span>
                 <div className="user">
                     <div className="userInfo">
                         <img src={sampleIm} alt="" />

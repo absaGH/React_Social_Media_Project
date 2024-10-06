@@ -11,11 +11,14 @@ import { Link } from "react-router-dom";
 import userImage from "/home/yosef/Desktop/react folders/React_Social_Media_Project/src/pages/images/image3.jpg";
 import { useContext } from "react";
 import { DarkModeContext } from "../../context/darkModeContext";
+import { AuthContext } from "../../context/authContext";
 
 
 const Navbar = () => {
 
   const {toggle, darkMode} = useContext(DarkModeContext);
+  const {currentUser} = useContext(AuthContext);
+
 
     return (
         <div className='navBar'>
@@ -36,8 +39,8 @@ const Navbar = () => {
                 <EmailOutlined/>
                 <NotificationsOutlined/>
                 <div className="user">
-                    <img src={userImage} alt="" />
-                    <span>John Doe</span>
+                    <img src={currentUser?.profilePic} alt="" />
+                    <span>{currentUser.name}</span>
                 </div>
             </div>
         </div>
